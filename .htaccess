@@ -1,0 +1,19 @@
+# Menyembunyikan list file/dir
+Options -Indexes
+
+# Menyembunyikan signature/tanda server
+ServerSignature Off
+
+# Memblokir ip address
+# Order Allow,Deny
+# Deny from http://localhost/
+# Allow from all
+
+# Menghilangkan ekstensi file di url
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+# Mengalihkan ke url lain
+# redirect /crud-php/mahasiswa.php https://google.com
