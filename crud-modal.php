@@ -48,11 +48,11 @@ if (isset($_POST['ubah'])) {
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Data Barang</h1>
+          <h1 class="m-0">Data Akun</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item active">Data Barang</li>
+            <li class="breadcrumb-item active">Data Akun</li>
           </ol>
         </div><!-- /.col -->
       </div><!-- /.row -->
@@ -70,14 +70,14 @@ if (isset($_POST['ubah'])) {
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">Tabel Data Barang</h3>
+                  <h3 class="card-title">Tabel Data Akun</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
                   <!-- Button trigger modal -->
                   <?php if ($_SESSION['level'] == 1) : ?>
                     <button type="button" class="btn btn-sm btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#modalTambah">
-                      <i class="fas fa-plus"></i> Tambah
+                      <i class="fas fa-plus"></i> Akun
                     </button>
                   <?php endif; ?>
                   <table class="table table-striped mt-2" id="table">
@@ -101,8 +101,8 @@ if (isset($_POST['ubah'])) {
                             <td class="text-center"><?= $akun['username']; ?></td>
                             <td class="text-center"><?= $akun['email']; ?></td>
                             <td class="text-center">
-                              <button type="button" class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalUbah<?= $akun['id_akun']; ?>">Ubah</button>
-                              <button type=" button" class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalHapus<?= $akun['id_akun']; ?>">Hapus</button>
+                              <button type="button" class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalUbah<?= $akun['id_akun']; ?>"><i class="fas fa-edit"></i></button>
+                              <button type=" button" class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalHapus<?= $akun['id_akun']; ?>"><i class="fas fa-trash-alt"></i></button>
                             </td>
                           </tr>
                           <?php $no++; ?>
